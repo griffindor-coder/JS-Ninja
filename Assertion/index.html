@@ -1,0 +1,36 @@
+<!-- The core of a unit-testing framework is the assertion method -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Suite</title>
+    <script>
+      function assert(value, desc) {
+        var li = document.createElement("li");
+        li.className = value ? "pass" : "fail";
+        li.appendChild(document.createTextNode(desc));
+        document.getElementById("results").appendChild(li);
+      }
+
+      window.onload = function () {
+        assert(true, "The Test Suite is running!");
+        assert(false, "Fail");
+      };
+    </script>
+
+    <style>
+      #results li.pass {
+        color: green;
+      }
+      #results li.fail {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--ul = An unordered list-->
+    <!--li = list item -->
+    <ul id="results"></ul>
+  </body>
+</html>

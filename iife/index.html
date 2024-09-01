@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Immediately Invoked Function Expression(IIFE)</title>
+    <script>
+      // function declaration
+      let f = function foo() {
+        console.log("foo");
+      };
+      //   function expression/invocation
+      f();
+
+      (function foo1() {
+        console.log("foo1");
+      })();
+
+      (function foo2() {
+        console.log("foo2");
+      })();
+
+      if (
+        (function foo3() {
+          return true;
+        })()
+      ) {
+        console.log("foo3");
+      }
+    </script>
+  </head>
+</html>
